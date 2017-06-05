@@ -8,7 +8,7 @@
 ## Syntax 语法
 下图就是一些良好的代码风格的规则：
 
-![code-style](code-style.png)
+![code-style](image/code-style.png)
 
 接下来我们来讨论上述规则和遵循他们的原因
 
@@ -21,7 +21,7 @@
 
 注意看下图的比较:
 
-![figure-bracket-style](figure-bracket-style.png)
+![figure-bracket-style](image/figure-bracket-style.png)
 
 我们来总结一下：
 > * 对于真的很短的代码，写在一行是可以接受的，比如 `if (cond) return null`
