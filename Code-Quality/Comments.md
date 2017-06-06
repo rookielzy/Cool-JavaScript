@@ -93,6 +93,9 @@ function addJuice(container) {
 ### Document a function usage
 下面有一种特殊的语法`JSDoc`，用来描述函数的作用，参数，返回值
 
+http://usejsdoc.org/
+
+
 例如：
 ```js
 /**
