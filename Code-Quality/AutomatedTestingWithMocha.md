@@ -62,5 +62,5 @@ describe("pow", fucntion() {
 ## The development flow
 开发流程通常看起来如下描述：
 
-1. 规范化的初始化，并附带主要的基本测试功能
+1. 规范化的初始化，并附带基本的主体测试功能
 2. 
