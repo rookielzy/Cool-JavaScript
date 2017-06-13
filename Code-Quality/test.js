@@ -13,20 +13,28 @@ describe("pow", function () {
       makeTest(x);
     }
 
+    it("for negative n the result is NaN", function() {
+      assert.isNaN(pow(2, -1));
+    });
+
+    it("for non-integer n the result is NaN", function() {
+      assert.isNaN(pow(2, 1.5));
+    });
+
   });
 
 });
 
 
-describe("test", function() {
+// describe("test", function() {
 
-  before(() => alert("Testing started - before all tests"));
-  after(() => alert("Testing finished - after all tests"));
+//   before(() => alert("Testing started - before all tests"));
+//   after(() => alert("Testing finished - after all tests"));
 
-  beforeEach(() => alert("Before a test - enter a test"));
-  afterEach(() => alert("After a test - exit a test"));
+//   beforeEach(() => alert("Before a test - enter a test"));
+//   afterEach(() => alert("After a test - exit a test"));
 
-  it("test 1", () => alert(1));
-  it("test 2", () => alert(2));
+//   it("test 1", () => alert(1));
+//   it("test 2", () => alert(2));
   
-});
+// });

@@ -21,6 +21,10 @@
 
     <script>
         function pow(x, n) {
+
+            if (n < 0) return NaN;
+            if (Math.round(n) != n) return NaN;
+
             let result = 1;
 
             for (let i = 0; i < n; i++) {
@@ -29,9 +33,9 @@
 
             return result;
         }
-        function test() {
+        // function test() {
             
-        }
+        // }
     </script>
 
     <!-- the script with tests (describe, it...) -->
