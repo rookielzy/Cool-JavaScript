@@ -1,14 +1,32 @@
 describe("pow", function () {
 
-  function makeTest(x) {
-    let expected = x * x * x;
-    it(`${x} in the power 3 is ${expected}`, function () {
-      assert.equal(pow(x, 3), expected);
-    });
-  }
+  describe("raise x to power n", function () {
 
-  for (let x = 1; x <= 5; x++) {
-    makeTest(x);
-  }
+    function makeTest(x) {
+      let expected = x * x * x;
+      it(`${x} in the power 3 is ${expected}`, function () {
+        assert.equal(pow(x, 3), expected);
+      });
+    }
 
+    for (let x = 1; x <= 5; x++) {
+      makeTest(x);
+    }
+
+  });
+
+});
+
+
+describe("test", function() {
+
+  before(() => alert("Testing started - before all tests"));
+  after(() => alert("Testing finished - after all tests"));
+
+  beforeEach(() => alert("Before a test - enter a test"));
+  afterEach(() => alert("After a test - exit a test"));
+
+  it("test 1", () => alert(1));
+  it("test 2", () => alert(2));
+  
 });
