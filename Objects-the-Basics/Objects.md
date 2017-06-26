@@ -8,3 +8,23 @@
 我们可以将对象想象成一个文件柜。每一块数据通过键`key`来存储在各自的文件夹中，这样我们就可以很容易通过文件的名字来添加或者删除文件了。
 
 ![object](image/object.png)
+
+空对象可以用如下两种语法来创建：
+
+```js
+let user = new Object(); // "object constructor" syntax
+let user = {}; // "object literal" syntax
+````
+
+![object-user-empty](image/object-user-empty.png)
+
+通常，我们使用大括号来创建空对象。
+
+# Literals and properties
+我们可以在大括号中添加键值对。
+```js
+let user = {
+    name: "John",
+    age: 30
+}
+```
