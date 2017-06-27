@@ -22,9 +22,23 @@ let user = {}; // "object literal" syntax
 
 # Literals and properties
 我们可以在大括号中添加键值对。
+
 ```js
 let user = {
     name: "John",
     age: 30
 }
 ```
+
+一个属性值有一个键在`":"`的左边，和一个值在它的右边。
+
+在`user`对象中就有两个属性：
+
+1. 第一个属性有一个名字键：`"name"`和一个值：`"John"`
+2. 第二个属性有一个名字键：`"age"`个一个值：`30`
+
+`user`对象也可以想象成一个放着有两个文件的抽屉。
+
+![object-user](image/object-user.png)
+
+我们可以随时从抽屉中增加，查阅和取出文件。
