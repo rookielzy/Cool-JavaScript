@@ -42,3 +42,50 @@ let user = {
 ![object-user](image/object-user.png)
 
 我们可以随时从抽屉中增加，查阅和取出文件。
+
+属性值可以通过`.`来进行访问
+
+```js
+alert(user.name);
+alert(user.age);
+```
+
+属性值可以为任意类型。让我们来添加一个布尔值：
+
+```js
+user.isAdmin = true;
+```
+
+![object-user-isadmin](image/object-user-isadmin.png)
+
+我们可以使用`delete`来移除属性
+
+```js
+delete user.age;
+```
+
+![object-user-delete](image/object-user-delete.png)
+
+我们还可以使用多字属性名，但它们必须使用引号括起来：
+
+```js
+let user = {
+    name: "John",
+    age: 30,
+    "like birds": true
+}
+```
+
+![object-user-props](image/object-user-props.png)
+
+## Trailing comma
+在列表中的最后一个属性带有`,`：
+
+```js
+let user = {
+    name: "John",
+    age: 30,
+}
+```
+
+这个叫尾逗号或者悬挂都好。因为所有行都是类似的，这样可以更加容易添加/移除/移动属性。
