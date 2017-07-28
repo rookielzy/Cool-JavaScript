@@ -99,7 +99,7 @@ let user = {
 
 这是因为点访问要求键为合法的变量标识符，也就是没有任何空格和其他限制。
 
-下面有一种中括号访问方式适用于任何字符串：
+下面有一种方括号访问方式适用于任何字符串：
 
 ```js
 let user = {};
@@ -114,9 +114,9 @@ alert(user["like birds"]);  // true
 delete user["like birds"];
 ```
 
-请谨记中括号内必须使用引号将键包括起来。
+请谨记方括号内必须使用引号将键包括起来。
 
-中括号同样了提供了一种使用任意表达式来表示键，而不是字面字符串来获取值：
+方括号同样了提供了一种使用任意表达式来表示键，而不是字面字符串来获取值：
 
 ```js
 let key = "likes birds";
@@ -140,7 +140,7 @@ alert(user[key]);   // Jon (if enter "name")
 ```
 
 ## Computed properties
-我们可以在一个对象中使用中括号，这也叫做计算属性。
+我们可以在一个对象中使用方括号，这也叫做计算属性。
 
 ```js
 let fruit = prompt("Which fruit to buy?", "apple");
@@ -168,7 +168,7 @@ bag[fruit] = 5;
 
 这样看起来更加美观了。
 
-我们还可以在中括号内使用更复杂的表达式：
+我们还可以在方括号内使用更复杂的表达式：
 
 ```js
 let fruit = 'apple';
@@ -176,3 +176,49 @@ let bag = {
     ['apple' + 'Computers']: 5  // bag.appleComputers = 5
 }
 ```
+
+方括号比起点访问方式要更加强大，它允许任何形式的属性名和变量名，但是它写起来也更加笨重。
+
+因此，很多时候当属性名时已知的，简介的，就用点访问方式。如果需要更复杂的操作，就使用方括号。
+
+## Reserved words are allowed as property names
+一个变量不能命名为关键词`for`, `let`, `return`等
+
+但是对于对象属性，它就没有这个限制，任何形式的名字都可以：
+
+```js
+let obj = {
+    for: 1,
+    let: 2,
+    return: 3
+}
+
+alert( obj.for + obj.let + obj.return ); // 6
+```
+
+基本上，任意的名字都是允许的，但是也有一个特例： `"__proto__:`，这是历史原因。
+
+```js
+let obj = {};
+obj.__proto__ = 5;
+alert(obj.__proto__);   // [object Object], didn't work as intended
+```
+
+## Property value shorthand
+在实际开发过程中，我们经常会使用已存在的变量作为属性名
+
+```js
+function makeUser() {
+    let name = prompt("Name?");
+    let age = prompt("Age?");
+    return {
+        name: name,
+        age: age
+    };
+}
+
+let user = makeUser("John", 30);
+alert(user.name);   // John
+```
+
+上面的例子中，属性名与变量名一样。
